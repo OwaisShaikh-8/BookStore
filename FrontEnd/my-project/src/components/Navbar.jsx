@@ -1,37 +1,58 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { FaBookOpen } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import Login from './Login';
+// import { Link } from 'react-router-dom';
 function Navbar() {
+    const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : "light")
+    const element = document.documentElement;
+    useEffect(() => {
+        if (theme === "dark") {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+            document.body.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+            document.body.classList.remove("dark");
+        }
+    }, [theme]); // Runs whenever `theme` changes
+
+
+
+
+
     const [sticky, setSticky] = useState(false)
     useEffect(() => {
         const handleScroll = () => {
-          if(window.scrollY>0){
-            setSticky(true)
-          }
-          else{
-            setSticky(false)
-          }
+            if (window.scrollY > 0) {
+                setSticky(true)
+            }
+            else {
+                setSticky(false)
+            }
         }
-        window.addEventListener('scroll',handleScroll)
+        window.addEventListener('scroll', handleScroll)
         return () => {
-          removeEventListener('scroll', handleScroll)
+            removeEventListener('scroll', handleScroll)
         }
-        
+
     }, [])
 
 
     const navitems = (
         <>
-            <li><a href="">Home</a></li>
-            <li><a href="">Course</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">About</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/courses">Courses</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/about">About</Link></li>
         </>
+
     )
     return (
-        <div className={`max-w-screen-2xl mx-auto container md:px-20  fixed top-0 right-0 left-0 ${
-            sticky?"sticky-navbar shadow-md bg-base-200 duration-300 transition-all ease-in-out":""
-        }`}>
+        <div className={`max-w-screen-2xl mx-auto container md:px-20 px-4 dark:bg-gray-900 dark:text-white fixed z-50 top-0 right-0 left-0 ${sticky ? "sticky-navbar dark:bg-slate-800 dark:text-white shadow-md bg-base-200 duration-300 transition-all ease-in-out" : ""
+            }`}>
 
             <div className="navbar">
                 <div className="navbar-start">
@@ -57,8 +78,8 @@ function Navbar() {
                         </ul>
                     </div>
                     <div className="logo flex items-center space-x-2">
-                    <a className="  text-2xl font-bold cursor-pointer"> ReadingCorner </a>
-                    <FaBookOpen className='text-2xl' />
+                        <a className="  text-2xl font-bold cursor-pointer"> ReadingCorner </a>
+                        <FaBookOpen className='text-2xl' />
                     </div>
                 </div>
                 <div className="navbar-end space-x-3" >
@@ -90,6 +111,7 @@ function Navbar() {
 
                             {/* sun icon */}
                             <svg
+                                onClick={() => setTheme(theme == "light" ? "dark" : "light")}
                                 className="swap-off h-7 w-7 fill-current"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24">
@@ -99,6 +121,7 @@ function Navbar() {
 
                             {/* moon icon */}
                             <svg
+                                onClick={() => setTheme(theme == "dark" ? "light" : "dark")}
                                 className="swap-on h-7 w-7 fill-current"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24">
@@ -108,7 +131,9 @@ function Navbar() {
                         </label>
                     </div>
                     <div className="">
-                        <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer">login</a>
+                        <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
+                         onClick={()=>document.getElementById("my_modal_3").showModal()}>login</a>
+                         <Login/>
                     </div>
                 </div>
             </div>

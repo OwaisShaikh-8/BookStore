@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from '../../public/banner.avif'
+import banner from '../../public/banner.png'
 function Banner() {
   return (
     <>
@@ -26,7 +26,7 @@ function Banner() {
           <button className="btn btn-secondary mt-6">Secondary</button>
         </div>
         <div className='order-1 w-full md:w-1/2 flex justify-center items-center'>
-          <img src={banner} alt="" className='w-[85%] h-[85%]'/>
+          <img src={banner} alt="" className='w-[85%] h-[85%] mix-blend-'/>
         </div>
       </div>
     </>

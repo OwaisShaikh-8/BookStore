@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "name": "The Lost Chronicles",
+        "title": "Unravel the secrets of ancient civilizations.",
+        "price": 0,
+        "category": "History",
+        "isPaid": false,
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Code Mastery",
+        "title": "Learn programming like never before.",
+        "price": 9.99,
+        "category": "Technology",
+        "isPaid": true,
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Enchanted Realms",
+        "title": "A magical journey through mystical lands.",
+        "price": 0,
+        "category": "Fantasy",
+        "isPaid": false,
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg"
+    },
+    {
+        "id": 4,
+        "name": "The Science of Everything",
+        "title": "Exploring the universe, one discovery at a time.",
+        "price": 12.50,
+        "category": "Science",
+        "isPaid": true,
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Epic Adventures",
+        "title": "Thrilling tales of courage and discovery.",
+        "price": 7.99,
+        "category": "Adventure",
+        "isPaid": true,
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Mastering the Mind",
+        "title": "Unlock the secrets of peak performance.",
+        "price": 0,
+        "category": "Self-Help",
+        "isPaid": false,
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Culinary Creations",
+        "title": "A journey through the world of flavors.",
+        "price": 15.00,
+        "category": "Cooking",
+        "isPaid": true,
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg"
+    },
+    {
+        "id": 8,
+        "name": "The Entrepreneur’s Guide",
+        "title": "Master the art of business and success.",
+        "price": 10.99,
+        "category": "Business",
+        "isPaid": true,
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg"
+    },
+    {
+        "id": 9,
+        "name": "The Poetry of Life",
+        "title": "A collection of verses that touch the soul.",
+        "price": 0,
+        "category": "Poetry",
+        "isPaid": false,
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg"
+    },
+    {
+        "id": 10,
+        "name": "The Cosmos Unveiled",
+        "title": "A deep dive into the wonders of space.",
+        "price": 13.49,
+        "category": "Science",
+        "isPaid": true,
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Legends and Myths",
+        "title": "Exploring the folklore of different cultures.",
+        "price": 0,
+        "category": "Mythology",
+        "isPaid": false,
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg"
+    }
+]
